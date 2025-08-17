@@ -269,7 +269,7 @@ export default function Portfolio() {
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-110"
               >
-                Let's Talk
+                Let&rsquo;s Talk
               </button>
             </div>
           </div>
