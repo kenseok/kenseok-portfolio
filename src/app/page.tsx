@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, ExternalLink, Moon, Sun, Menu, X, Code, Palette, Rocket, Camera, Star, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { Github, Mail, ExternalLink, Moon, Sun, Menu, X, Code, Palette, Rocket, Camera, Terminal, Zap, Star, ArrowRight } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -270,7 +269,7 @@ export default function Portfolio() {
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-110"
               >
-                Let&apos;s Talk
+                Let&rsquo;s Talk
               </button>
             </div>
           </div>
@@ -366,9 +365,9 @@ export default function Portfolio() {
                   icon: <Camera size={32} />,
                   color: "from-green-500 to-teal-500"
                 }
-              ].map((service, serviceIndex) => (
+              ].map((service, index) => (
                 <div
-                  key={serviceIndex}
+                  key={index}
                   className="group p-6 bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
@@ -395,7 +394,7 @@ export default function Portfolio() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill) => (
+            {skills.map((skill, index) => (
               <div
                 key={skill.name}
                 className="group p-8 bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-500 hover:scale-105"
@@ -434,20 +433,18 @@ export default function Portfolio() {
           </div>
 
           <div className="space-y-16">
-            {projects.map((project, projectIndex) => (
+            {projects.map((project, index) => (
               <div
                 key={project.id}
                 className={`group grid lg:grid-cols-2 gap-12 items-center ${
-                  projectIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
               >
-                <div className={`relative ${projectIndex % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 group-hover:border-cyan-500/50 transition-all duration-500">
-                    <Image
+                    <img
                       src={project.image}
                       alt={project.title}
-                      width={800}
-                      height={600}
                       className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -486,7 +483,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className={`space-y-6 ${projectIndex % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                   <div>
                     <h3 className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {project.title}
@@ -527,7 +524,7 @@ export default function Portfolio() {
           <div className="mb-20">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                LET&apos;S CREATE
+                LET&rsquo;S CREATE
               </span>
             </h2>
             <p className="text-2xl text-gray-400 mb-8">
@@ -579,4 +576,4 @@ export default function Portfolio() {
       </footer>
     </div>
   );
-}
+}// Updated Mon Aug 18 00:53:24 JST 2025
