@@ -524,7 +524,7 @@ export default function Portfolio() {
           <div className="mb-20">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                LET&rsquo;S CREATE
+                LET&amp;rsquo;S CREATE
               </span>
             </h2>
             <p className="text-2xl text-gray-400 mb-8">
